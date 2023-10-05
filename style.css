@@ -15,6 +15,11 @@ a {
   color: #000;
 }
 
+button {
+  border: none;
+  background-color: inherit;
+}
+
 .center {
   padding-left: calc(50% - 700px);
   padding-right: calc(50% - 700px);
@@ -130,7 +135,7 @@ a {
 .bg {
   position: absolute;
   padding: +24px;
-  background-color: #fff;
+  background-color: #f6f6fa;
   border-radius: 24px;
   width: 100%;
   height: 100%;
@@ -141,6 +146,7 @@ a {
   display: flex;
   flex-flow: column wrap;
   gap: 27px;
+  width: 891px /* 100%*/;
 }
 
 .cart-title {
@@ -152,6 +158,164 @@ a {
   line-height: 36px; /* 128.571% */
   letter-spacing: -0.28px;
   padding-top: 11px;
+}
+
+.details-container {
+  position: relative;
+}
+
+.in-stock {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.items {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding-top: 9px;
+}
+
+.item-left {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.item-img {
+  margin-right: 16px;
+}
+
+.item-left-content {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 8px;
+}
+
+.name-item {
+  color: var(--text-black, #000);
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+.description {
+  color: var(--text-black, #000);
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 16px;
+}
+
+.holders {
+  color: var(--system-gray, #9797af);
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info {
+  position: relative;
+}
+
+.info::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(/img/icons/info.svg) no-repeat;
+
+  position: absolute;
+  z-index: 5;
+  top: -2px;
+  right: 70px;
+}
+
+.item-right {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 16px;
+}
+
+.item-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: end;
+}
+
+.item-btn-quantity {
+  display: flex;
+  flex-flow: row nowrap;
+  /* align-items: center;
+  justify-content: center; */
+  width: 100px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.minus,
+.plus {
+  color: var(--text-black, #000);
+  text-align: center;
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.2px;
+
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 8px;
+}
+
+.value {
+  color: var(--text-black, #000);
+  text-align: center;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 18.205px;
+  padding-right: 18.205px;
+}
+
+.stock-counter {
+  color: var(--dark-system-coral, #ff3b30);
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+}
+
+.item-btn-couple {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 /* Checkbox */
@@ -182,7 +346,7 @@ a {
   width: 22px;
   height: 22px;
   border: 1px solid #00000033;
-  background-color: #fff;
+  background-color: inherit;
   border-radius: 6px;
 
   position: absolute;
@@ -292,12 +456,12 @@ a {
 /* Checkbox-Details */
 
 .checkbox-details {
+  display: flex;
 }
 
 .checkbox-details-input {
   -webkit-appearance: none;
   appearance: none;
-  position: absolute;
   cursor: pointer;
 }
 
@@ -318,6 +482,9 @@ a {
 
 .checkbox-details-container {
   display: none;
+  position: absolute;
+  left: 0;
+  top: 38px;
 }
 
 .checkbox-details-input:checked ~ .checkbox-details-container {
