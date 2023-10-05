@@ -19,6 +19,7 @@ a {
 }
 
 .header {
+  width: 100%;
   position: relative;
   display: flex;
   align-items: center;
@@ -132,4 +133,158 @@ a {
   width: 100%;
   height: 100%;
   top: 88px;
+}
+
+.cart-container {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 27px;
+}
+
+.cart-title {
+  color: var(--text-black, #000);
+
+  /* Сайт/H1 */
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px; /* 128.571% */
+  letter-spacing: -0.28px;
+  padding-top: 11px;
+}
+
+/* Checkbox */
+
+.checkbox {
+  position: relative;
+}
+
+.checkbox-input {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+  cursor: pointer;
+}
+
+.checkbox-label {
+  color: var(--text-black, #000);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  padding-left: 34px;
+  cursor: pointer;
+}
+
+.checkbox-label::before {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 21px;
+  border: 1px solid #00000033;
+  background-color: #fff;
+  border-radius: 6px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  transition: 0.1s ease-in-out;
+}
+
+.checkbox-label::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+
+  background: url(/img/icons/checkbox.svg) no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 6px;
+  opacity: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  transition: opacity 0.1s ease-out;
+}
+
+.checkbox-input:checked + .checkbox-label::before {
+  background-color: #cb11ab;
+  border: none;
+  width: 22px;
+  height: 22px;
+}
+
+.checkbox-input:checked + .checkbox-label::after {
+  opacity: 1;
+}
+
+/* Radios */
+
+.radio {
+  position: relative;
+}
+
+.radio-input {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+  cursor: pointer;
+}
+
+.radio-label {
+  color: var(--text-black, #000);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  padding-left: 28px;
+  cursor: pointer;
+}
+
+.radio-label::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 2px;
+
+  border: 1px solid #00000033;
+  background-color: #fff;
+  border-radius: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  transition: 0.1s ease-in-out;
+}
+
+/* .radio-label::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+
+  background-color: #fff;
+  background-position: center;
+  border: none;
+  border-radius: 100%;
+  opacity: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  transition: opacity 0.1s ease-out;
+} */
+
+.radio-input:checked + .radio-label::before {
+  border: 6px solid #cb11ab;
+  width: 6px;
+  height: 6px;
 }
