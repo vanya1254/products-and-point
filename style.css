@@ -212,6 +212,7 @@ main {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  margin-top: -2px;
 }
 
 .total-price-title h2 {
@@ -238,6 +239,7 @@ main {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  margin-top: 2px;
 }
 
 .total-delivery {
@@ -250,6 +252,7 @@ main {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  margin-top: 4px;
 }
 
 .total-delivery-title h3 {
@@ -285,7 +288,7 @@ main {
   gap: 8px;
   padding: 8px;
   padding-bottom: 12px;
-  margin-top: 8px;
+  margin-top: 9px;
   border-radius: 8px;
   background: var(--background-smoky, #f6f6fa);
 }
@@ -313,6 +316,7 @@ main {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  margin-top: 1px;
 }
 
 .total-payment-title h3 {
@@ -327,6 +331,7 @@ main {
   display: flex;
   flex-flow: row nowrap;
   gap: 8px;
+  margin-top: 3px;
 }
 
 .icon-method {
@@ -358,13 +363,18 @@ main {
   gap: 8px;
   padding: 8px;
   padding-bottom: 12px;
-  margin-top: 8px;
+  margin-top: 12px;
   border-radius: 8px;
   background: var(--background-smoky, #f6f6fa);
 }
 
+.total-payment-time .checkbox {
+  margin-bottom: 2px;
+}
+
 .total-payment-time .checkbox-label {
   padding-top: 3px;
+  padding-left: 31px;
 }
 
 .total-payment-time .checkbox-label,
@@ -424,7 +434,7 @@ a {
 .agree:checked ~ .agree-text::before {
   content: "";
   position: absolute;
-  top: 3px;
+  top: 2px;
   left: 0px;
 
   width: 13px;
@@ -455,13 +465,18 @@ a {
 
 .details-container {
   position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 40px;
 }
 
-.in-stock {
+.in-stock,
+.out-of-stock {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .check-underline {
@@ -473,6 +488,7 @@ a {
 
 .checkbox-details-container {
   width: 100%;
+  display: flex;
 }
 
 .items {
