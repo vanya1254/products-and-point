@@ -169,7 +169,6 @@ button {
   background-color: #f6f6fa;
   border-radius: 24px;
   width: 100%;
-  height: 100%;
   top: 88px;
 }
 
@@ -186,6 +185,8 @@ main {
   padding-top: 16px;
   gap: 12px;
   height: fit-content;
+  position: sticky;
+  top: 16px;
 
   border: none;
   border-radius: 16px;
@@ -712,6 +713,191 @@ a {
   background-color: #9797af;
 }
 
+.oos-title {
+  color: var(--text-black, #000);
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+}
+
+.check-underline.oos {
+  bottom: -18px;
+}
+
+.checkbox-details {
+  margin-top: 1px;
+}
+
+.checkbox-details-container.oos {
+  top: 42px;
+}
+
+.name-item.oos {
+  width: 309px;
+  color: var(--system-gray, #9797af);
+}
+
+.description.oos {
+  color: var(--system-gray, #9797af);
+}
+
+.order-registration {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 16px;
+}
+
+.delivery,
+.payment {
+  border-radius: 16px;
+  background: var(--background-white, #fff);
+
+  padding: 24px;
+  padding-top: 16px;
+
+  display: flex;
+  flex-flow: column wrap;
+  gap: 16px;
+}
+
+.delivery-title,
+.payment-title {
+  color: var(--text-black, #000);
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: -0.24px;
+}
+
+.delivery-description {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 16px;
+}
+
+.delivery-address,
+.delivery-price,
+.delivery-date {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 32px;
+}
+
+.delivery-address-subtitle,
+.delivery-price-subtitle,
+.delivery-date-subtitle {
+  color: var(--text-black, #000);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+  width: 153px;
+}
+
+.delivery-address-content {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 4px;
+
+  color: var(--text-black, #000);
+  font-weight: 400;
+}
+
+.delivery-point {
+  font-size: 16px;
+  line-height: 24px; /* 150% */
+}
+
+.delivery-info {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 8px;
+  align-items: center;
+
+  font-size: 13px;
+  line-height: 16px; /* 123.077% */
+}
+
+.delivery-price-content {
+  color: var(--text-black, #000);
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+.delivery-date-content {
+  display: flex;
+  gap: 8px;
+}
+
+.delivery-item {
+  height: 56px;
+}
+
+.counter-mark {
+  position: relative;
+}
+
+.counter-mark::after {
+  position: absolute;
+  content: "100";
+  padding: 1px 4px 0px 4px;
+  width: fit-content;
+
+  color: var(--text-white, #fff);
+  text-align: center;
+  font-family: Segoe UI;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 18px; /* 180% */
+
+  top: -8px;
+  right: -4px;
+  border-radius: 16px;
+  background: var(--system-orange, #f55123);
+}
+
+.delivery-return {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.payment-description {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 8px;
+}
+
+.payment-method {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.payment-method p {
+  color: var(--text-black, #000);
+  font-size: 16px;
+  line-height: 24px; /* 150% */
+}
+
+.payment-icon {
+  border-radius: 4px;
+  background: var(--background-smoky, #f6f6fa);
+}
+
+.payment-time {
+  color: var(--system-gray, #9797af);
+
+  font-size: 13px;
+  line-height: 16px; /* 123.077% */
+}
+
 /* Checkbox */
 
 .checkbox {
@@ -885,4 +1071,15 @@ a {
 
 .checkbox-details-input:checked ~ .checkbox-details-container {
   display: block;
+}
+
+/* Input text */
+
+input[type="text"],
+[type="email"] {
+  border: none;
+  background: none;
+
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }

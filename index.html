@@ -277,7 +277,7 @@
                 <div id="stock-2" class="out-of-stock">
                     <h4 class="oos-title">Отсутствуют · 3 товара</h4>
                     <hr class="check-underline oos">
-                    <div class="checkbox-details">
+                    <div class="checkbox-details oos">
                         <input onclick="openOutOfStock()" class="checkbox-details-input oos" type="checkbox"
                             name="checkbox-details" id="checkbox-details-oos">
                         <label for="checkbox-details-oos" class="checkbox-details-label oos"></label>
@@ -435,7 +435,7 @@
                                         <img class="item-img oos" src="/img/items/item3.jpg" alt="item">
                                         <div class="item-left-content oos">
                                             <h6 class="name-item oos">Карандаши цветные Faber-Castell "Замок", набор 24
-                                                цвета, заточенные, шестигранные,<br>Faber-Castell</h6>
+                                                цвета, заточенные, шестигранные,Faber-Castell</h6>
                                             <div class="description oos" style="display: none;">
                                                 <span class="color oos">Цвет: белый</span>
                                                 <span class="size oos">Размер: 56</span>
@@ -501,17 +501,128 @@
                     </div>
 
                 </div>
-                <!-- <div class="order-registration">
+                <div class="order-registration">
                     <section class="delivery">
-                        <h2>Способ доставки</h2>
+                        <h2 class="delivery-title change">Способ доставки</h2>
+                        <div class="delivery-description">
+                            <article class="delivery-address">
+                                <h4 class="delivery-address-subtitle">Пункт выдачи</h4>
+                                <div class="delivery-address-content">
+                                    <p class="delivery-point">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                                    <div class="delivery-info">
+                                        <div class="rate">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                viewBox="0 0 12 12" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922"
+                                                    fill="#FF970D" />
+                                            </svg>
+                                            <span class="rate-number">4.99</span>
+                                        </div>
+                                        <p class="worktime">Ежедневно с 10 до 21 </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="delivery-price">
+                                <h4 class="delivery-price-subtitle">Стоимость доставки</h4>
+                                <p class="delivery-price-content">Бесплатно</p>
+                            </article>
+                            <article class="delivery-date">
+                                <h4 class="delivery-date-subtitle">5—6 февраля</h4>
+                                <div class="delivery-date-content">
+                                    <span>
+                                        <img class="delivery-item" src="/img/items/item1.jpg" alt="item"></span>
+                                    <span class="counter-mark"><img class="delivery-item" src="/img/items/item2.jpg"
+                                            alt="item"></span>
+                                    <span class="counter-mark"><img class="delivery-item" src="/img/items/item3.jpg"
+                                            alt="item"></span>
+                                </div>
+                            </article>
+                            <article class="delivery-date">
+                                <h4 class="delivery-date-subtitle">7—8 февраля</h4>
+                                <div class="delivery-date-content">
+                                    <span class="counter-mark">
+                                        <img class="delivery-item" src="/img/items/item2.jpg" alt="item"></span>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="delivery-return">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M1 10.9998C1 16.5226 5.47715 20.9998 11 20.9998C16.5228 20.9998 21 16.5226 21 10.9998C21 5.47691 16.5228 0.999756 11 0.999756C5.47715 0.999756 1 5.47691 1 10.9998ZM19.1818 10.9997C19.1818 15.5184 15.5187 19.1816 11 19.1816C6.48128 19.1816 2.81815 15.5184 2.81815 10.9997C2.81815 6.48103 6.48128 2.81791 11 2.81791C15.5187 2.81791 19.1818 6.48103 19.1818 10.9997Z"
+                                    fill="url(#paint0_linear_7_2262)" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M6.98273 9.6548C7.40206 9.29538 8.03336 9.34394 8.39278 9.76327L10.6286 12.3717L14.6826 7.58061C15.0394 7.15901 15.6704 7.10643 16.092 7.46317C16.5136 7.81991 16.5662 8.45089 16.2094 8.8725L11.7761 14.1118C11.1795 14.817 10.0933 14.8204 9.49219 14.1191L6.87427 11.0648C6.51485 10.6455 6.56341 10.0142 6.98273 9.6548Z"
+                                    fill="url(#paint1_linear_7_2262)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_7_2262" x1="4" y1="1.99994" x2="11" y2="20.9998"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#0CD38B" />
+                                        <stop offset="1" stop-color="#0CB477" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_7_2262" x1="9" y1="7.5" x2="10.5089" y2="15.8594"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#0CD38B" />
+                                        <stop offset="1" stop-color="#0CB477" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <p>Обратная доставка товаров на склад при отказе — <span class="mark-green">бесплатно</span>
+                            </p>
+                        </div>
                     </section>
                     <section class="payment">
-                        <h2>Способ оплаты</h2>
+                        <h2 class="payment-title change">Способ оплаты</h2>
+                        <div class="payment-description">
+                            <div class="payment-method">
+                                <div class="payment-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 30 10"
+                                        fill="none">
+                                        <path
+                                            d="M16.6813 1.84377L14.8645 5.7583H14.6806V1.00031H12.0852V9.00239H14.2372C14.8212 9.00239 15.3403 8.66717 15.589 8.14811L17.4166 4.24439H17.6005V9.00239H20.1959V1.00031H18.0114C17.4491 1.00031 16.9192 1.33553 16.6813 1.84377Z"
+                                            fill="#319B42" />
+                                        <path
+                                            d="M6.97243 2.04923L5.90182 5.7583H5.71798L4.63656 2.04923C4.45271 1.42204 3.87956 1.00031 3.2307 1.00031H0.667725V9.00239H3.26315V4.24439H3.44699L4.93935 9.00239H6.66963L8.162 4.24439H8.34584V9.00239H10.9413V1.00031H8.37829C7.72943 1.00031 7.14546 1.42204 6.97243 2.04923Z"
+                                            fill="#319B42" />
+                                        <path
+                                            d="M21.3244 4.56739V9.00239H23.9207V6.40629H26.7116C27.9232 6.40629 28.9509 5.63828 29.3295 4.56739H21.3244Z"
+                                            fill="#319B42" />
+                                        <path
+                                            d="M26.6358 1.00031H20.8591C21.2161 2.90411 22.882 4.24543 24.8833 4.24543H29.3727C29.4051 4.07235 29.4267 3.87765 29.4267 3.68294C29.4267 2.1361 28.1827 1.00031 26.6358 1.00031Z"
+                                            fill="url(#paint0_linear_7_2400)" />
+                                        <defs>
+                                            <linearGradient id="paint0_linear_7_2400" x1="20.8591" y1="2.62287"
+                                                x2="29.4267" y2="2.62287" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#00A3E1" />
+                                                <stop offset="0.3042" stop-color="#009ADD" />
+                                                <stop offset="0.7987" stop-color="#0082D4" />
+                                                <stop offset="1" stop-color="#0076CF" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <p>1234 12•• •••• 1234</p>
+                                <p>01/30</p>
+                            </div>
+                            <p class="payment-time">Спишем оплату с карты при получении</p>
+                        </div>
                     </section>
                     <section class="recipient">
                         <h2>Получатель</h2>
+                        <form action="" class="recipient-form">
+                            <div class="recipent-name">
+                                <input placeholder="Имя" type="text" name="name" id="">
+                                <input placeholder="Фамилия" type="text" name="surname" id="">
+                            </div>
+                            <div class="recipient-contacts">
+                                <input placeholder="Почта" type="email" name="email" id="">
+                                <input placeholder="Телефон" type="text" name="phone" id="">
+                                <input placeholder="ИНН" type="text" name="tin" id="">
+                            </div>
+                        </form>
                     </section>
-                </div> -->
+                </div>
             </div>
         </section>
 
@@ -648,7 +759,7 @@
         }
         function openOutOfStock() {
             if (document.getElementById('checkbox-details-oos').checked) {
-                document.getElementById('stock-2').style.marginBottom = '430px';
+                document.getElementById('stock-2').style.marginBottom = '396px';
             } else {
                 document.getElementById('stock-2').style.marginBottom = '0px';
             }
