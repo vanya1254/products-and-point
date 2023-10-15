@@ -426,43 +426,20 @@
                                     </div>
                                 </div>
 
-                                <div class="item oos">
+                                <div class="item oos big-item">
                                     <div class="item-left oos">
-                                        <!-- <div class="checkbox">
-                                            <input id="check-item3" class="checkbox-input" type="checkbox">
-                                            <label for="check-item3" class="checkbox-label"></label>
-                                        </div> -->
                                         <img class="item-img oos" src="/img/items/item3.jpg" alt="item">
                                         <div class="item-left-content oos">
                                             <h6 class="name-item oos">Карандаши цветные Faber-Castell "Замок", набор 24
-                                                цвета, заточенные, шестигранные,Faber-Castell</h6>
+                                                цвета, заточенные, шестигранные, Faber-Castell </h6>
                                             <div class="description oos" style="display: none;">
                                                 <span class="color oos">Цвет: белый</span>
                                                 <span class="size oos">Размер: 56</span>
                                             </div>
-                                            <!-- <div class="holders">
-                                                <span class="point">Коледино WB</span>
-                                                <div class="company">OOO Вайлдберриз<span class="info">
-                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <circle cx="8" cy="8" r="7.5" stroke="#9797AF" />
-                                                            <path
-                                                                d="M7.88867 5.58691C7.62826 5.58691 7.41504 5.51042 7.24902 5.35742C7.08301 5.20117 7 5.01074 7 4.78613C7 4.55501 7.08301 4.36621 7.24902 4.21973C7.41504 4.07324 7.62826 4 7.88867 4C8.15234 4 8.36556 4.07324 8.52832 4.21973C8.69434 4.36621 8.77734 4.55501 8.77734 4.78613C8.77734 5.02051 8.69434 5.21257 8.52832 5.3623C8.36556 5.51204 8.15234 5.58691 7.88867 5.58691ZM8.65039 11.3779H7.10742V6.37793H8.65039V11.3779Z"
-                                                                fill="#9797AF" />
-                                                        </svg>
-
-                                                    </span></div>
-                                            </div> -->
                                         </div>
                                     </div>
                                     <div class="item-right oos">
                                         <div class="item-btns oos">
-                                            <!-- <div class="item-btn-quantity">
-                                                <button id="increment-btn" class="minus">−</button>
-                                                <div id="counter-value" class="counter">2</div>
-                                                <button id="decrement-btn" class="plus">+</button>
-                                            </div> -->
-                                            <!-- <div class="stock-counter">Осталось 2 шт.</div> -->
                                             <div class="item-btn-couple oos">
                                                 <button class="wish">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -488,12 +465,6 @@
                                                 </button>
                                             </div>
                                         </div>
-                                        <!-- <div class="item-price">
-                                            <h5 class="price"><span class="value">494</span><span
-                                                    class="currency">сом</span>
-                                            </h5>
-                                            <p class="price-old">950 сом</p>
-                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -602,23 +573,39 @@
                                         </defs>
                                     </svg>
                                 </div>
-                                <p>1234 12•• •••• 1234</p>
+                                <p>1234 56•• •••• 1234</p>
                                 <p>01/30</p>
                             </div>
                             <p class="payment-time">Спишем оплату с карты при получении</p>
                         </div>
                     </section>
                     <section class="recipient">
-                        <h2>Получатель</h2>
+                        <h2 class="recipient-title">Получатель</h2>
                         <form action="" class="recipient-form">
-                            <div class="recipent-name">
-                                <input placeholder="Имя" type="text" name="name" id="">
-                                <input placeholder="Фамилия" type="text" name="surname" id="">
+                            <div class="recipient-name">
+                                <div class="input">
+                                    <input type="text" class="input-text" placeholder="Имя" name="name" id="name">
+                                    <label for="name" class="input-label">Имя</label>
+                                </div>
+                                <div class="input">
+                                    <input type="text" id="surname" class="input-text" placeholder="Фамилия"
+                                        name="surname">
+                                    <label for="surname" class="input-label">Фамилия</label>
+                                </div>
                             </div>
                             <div class="recipient-contacts">
-                                <input placeholder="Почта" type="email" name="email" id="">
-                                <input placeholder="Телефон" type="text" name="phone" id="">
-                                <input placeholder="ИНН" type="text" name="tin" id="">
+                                <div class="input">
+                                    <input type="text" class="input-text" placeholder="Почта" name="email" id="email">
+                                    <label for="email" class="input-label">Почта</label>
+                                </div>
+                                <div class="input">
+                                    <input type="text" id="phone" class="input-text" placeholder="Телефон" name="phone">
+                                    <label for="phone" class="input-label">Телефон</label>
+                                </div>
+                                <div class="input">
+                                    <input type="text" class="input-text" placeholder="ИНН" name="tin" id="tin">
+                                    <label for="tin" class="input-label">ИНН</label>
+                                </div>
                             </div>
                         </form>
                     </section>
@@ -747,7 +734,9 @@
             </div>
         </aside>
     </main>
-    <footer class="center"></footer>
+    <footer class="center">
+        <p class="credits">© 2022 ООО «Товары и точка»</p>
+    </footer>
 
     <script>
         function openInStock() {
@@ -759,7 +748,7 @@
         }
         function openOutOfStock() {
             if (document.getElementById('checkbox-details-oos').checked) {
-                document.getElementById('stock-2').style.marginBottom = '396px';
+                document.getElementById('stock-2').style.marginBottom = '381px';
             } else {
                 document.getElementById('stock-2').style.marginBottom = '0px';
             }
