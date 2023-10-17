@@ -7,7 +7,6 @@
 }
 
 body {
-  height: 100vh;
   font-family: Segoe UI;
 }
 
@@ -170,7 +169,6 @@ button {
   padding: 10px 24px;
   background-color: #f6f6fa;
   width: 100%;
-  height: inherit;
 
   /* position: absolute;
   top: 88px;
