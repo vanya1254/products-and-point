@@ -48,7 +48,7 @@
                 <div id="stock-1" class="in-stock">
                     <div class="checkbox">
                         <input id="check-all" class="checkbox-input" type="checkbox">
-                        <label for="check-all" class="checkbox-label">Выбрать все</label>
+                        <label for="check-all" class="checkbox-label all">Выбрать все</label>
                     </div>
                     <hr class="check-underline">
                     <div class="checkbox-details">
@@ -59,11 +59,13 @@
                             <div class="items">
                                 <div class="item">
                                     <div class="item-left">
-                                        <div class="checkbox">
-                                            <input id="check-item1" class="checkbox-input" type="checkbox">
-                                            <label for="check-item1" class="checkbox-label"></label>
+                                        <div class="item-checkbox-img">
+                                            <div class="checkbox">
+                                                <input id="check-item1" class="checkbox-input" type="checkbox">
+                                                <label for="check-item1" class="checkbox-label"></label>
+                                            </div>
+                                            <img class="item-img" src="/img/items/item1.jpg" alt="item">
                                         </div>
-                                        <img class="item-img" src="/img/items/item1.jpg" alt="item">
                                         <div class="item-left-content">
                                             <h6 class="name-item">Футболка UZcotton мужская</h6>
                                             <div class="description">
@@ -72,8 +74,7 @@
                                             </div>
                                             <div class="holders">
                                                 <span class="point">Коледино WB</span>
-                                                <div class="company">OOO Вайлдберриз
-                                                    <span class="info">
+                                                <div class="company"><span>OOO Вайлдберриз</span><span class="info">
                                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <circle cx="8" cy="8" r="7.5" stroke="#9797AF" />
@@ -90,9 +91,11 @@
                                     <div class="item-right">
                                         <div class="item-btns">
                                             <div class="item-btn-quantity">
-                                                <button id="increment-btn" class="minus">−</button>
+                                                <button id="increment-btn" class="minus-btn"><span
+                                                        class="minus">−</span></button>
                                                 <div id="counter-value" class="counter">1</div>
-                                                <button id="decrement-btn" class="plus">+</button>
+                                                <button id="decrement-btn" class="plus-btn"><span
+                                                        class="plus">+</span></button>
                                             </div>
                                             <div class="stock-counter">Осталось 2 шт.</div>
                                             <div class="item-btn-couple">
@@ -131,11 +134,13 @@
 
                                 <div class="item">
                                     <div class="item-left">
-                                        <div class="checkbox">
-                                            <input id="check-item2" class="checkbox-input" type="checkbox">
-                                            <label for="check-item2" class="checkbox-label"></label>
+                                        <div class="item-checkbox-img">
+                                            <div class="checkbox">
+                                                <input id="check-item2" class="checkbox-input" type="checkbox">
+                                                <label for="check-item2" class="checkbox-label"></label>
+                                            </div>
+                                            <img class="item-img" src="/img/items/item2.jpg" alt="item">
                                         </div>
-                                        <img class="item-img" src="/img/items/item2.jpg" alt="item">
                                         <div class="item-left-content">
                                             <h6 class="name-item">Силиконовый чехол картхолдер (отверстия) для карт,
                                                 прозрачный кейс бампер на Apple iPhone XR, MobiSafe</h6>
@@ -145,7 +150,7 @@
                                             </div>
                                             <div class="holders">
                                                 <span class="point">Коледино WB</span>
-                                                <div class="company">OOO Мегапрофстиль<span class="info">
+                                                <div class="company"><span>OOO Мегапрофстиль</span><span class="info">
                                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <circle cx="8" cy="8" r="7.5" stroke="#9797AF" />
@@ -154,16 +159,19 @@
                                                                 fill="#9797AF" />
                                                         </svg>
 
-                                                    </span></div>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item-right">
                                         <div class="item-btns">
                                             <div class="item-btn-quantity">
-                                                <button id="increment-btn" class="minus">−</button>
+                                                <button id="increment-btn" class="minus-btn"><span
+                                                        class="minus">−</span></button>
                                                 <div id="counter-value" class="counter">200</div>
-                                                <button id="decrement-btn" class="plus">+</button>
+                                                <button id="decrement-btn" class="plus-btn"><span
+                                                        class="plus">+</span></button>
                                             </div>
                                             <div style="display: none;" class="stock-counter">Осталось 2 шт.</div>
                                             <div class="item-btn-couple">
@@ -202,12 +210,14 @@
 
                                 <div class="item">
                                     <div class="item-left">
-                                        <div class="checkbox">
-                                            <input id="check-item3" class="checkbox-input" type="checkbox">
-                                            <label for="check-item3" class="checkbox-label"></label>
+                                        <div class="item-checkbox-img">
+                                            <div class="checkbox">
+                                                <input id="check-item3" class="checkbox-input" type="checkbox">
+                                                <label for="check-item3" class="checkbox-label"></label>
+                                            </div>
+                                            <img class="item-img" src="/img/items/item3.jpg" alt="item">
                                         </div>
-                                        <img class="item-img" src="/img/items/item3.jpg" alt="item">
-                                        <div class="item-left-content">
+                                        <div class="item-left-content big-content">
                                             <h6 class="name-item">Карандаши цветные Faber-Castell "Замок", набор 24
                                                 цвета, заточенные, шестигранные,<br>Faber-Castell</h6>
                                             <div class="description" style="display: none;">
@@ -216,7 +226,7 @@
                                             </div>
                                             <div class="holders">
                                                 <span class="point">Коледино WB</span>
-                                                <div class="company">OOO Вайлдберриз<span class="info">
+                                                <div class="company"><span>OOO Вайлдберриз</span><span class="info">
                                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <circle cx="8" cy="8" r="7.5" stroke="#9797AF" />
@@ -225,16 +235,19 @@
                                                                 fill="#9797AF" />
                                                         </svg>
 
-                                                    </span></div>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item-right">
                                         <div class="item-btns">
                                             <div class="item-btn-quantity">
-                                                <button id="increment-btn" class="minus">−</button>
+                                                <button id="increment-btn" class="minus-btn"><span
+                                                        class="minus">−</span></button>
                                                 <div id="counter-value" class="counter">2</div>
-                                                <button id="decrement-btn" class="plus">+</button>
+                                                <button id="decrement-btn" class="plus-btn"><span
+                                                        class="plus">+</span></button>
                                             </div>
                                             <div class="stock-counter">Осталось 2 шт.</div>
                                             <div class="item-btn-couple">
@@ -741,14 +754,14 @@
     <script>
         function openInStock() {
             if (document.getElementById('checkbox-details-stock').checked) {
-                document.getElementById('stock-1').style.marginBottom = '490px';
+                document.getElementById('stock-1').style.marginBottom = '492px';
             } else {
                 document.getElementById('stock-1').style.marginBottom = '0px';
             }
         }
         function openOutOfStock() {
             if (document.getElementById('checkbox-details-oos').checked) {
-                document.getElementById('stock-2').style.marginBottom = '381px';
+                document.getElementById('stock-2').style.marginBottom = '380px';
             } else {
                 document.getElementById('stock-2').style.marginBottom = '0px';
             }

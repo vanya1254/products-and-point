@@ -165,13 +165,37 @@ button {
 }
 
 .bg {
-  position: absolute;
-  padding: +24px;
+  position: relative;
+  padding: 10px 24px;
   background-color: #f6f6fa;
-  border-radius: 24px;
   width: 100%;
+
+  /* position: absolute;
   top: 88px;
-  margin-bottom: 64px;
+  border-radius: 24px; */
+}
+
+.bg::before {
+  content: "";
+  width: 100%;
+  height: 24px;
+  position: absolute;
+  top: -24px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  background-color: #f6f6fa;
+}
+
+.bg::after {
+  content: "";
+  width: 100%;
+  height: 24px;
+  position: absolute;
+  bottom: -24px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  background-color: #f6f6fa;
+  z-index: 10;
 }
 
 main {
@@ -190,6 +214,7 @@ main {
   position: sticky;
   top: 16px;
 
+  margin-top: -12px;
   border: none;
   border-radius: 16px;
   background: var(--background-white, #fff);
@@ -215,7 +240,6 @@ main {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  margin-top: -2px;
 }
 
 .total-price-title h2 {
@@ -463,7 +487,6 @@ a {
   font-weight: 700;
   line-height: 36px; /* 128.571% */
   letter-spacing: -0.28px;
-  padding-top: 11px;
 }
 
 .details-container {
@@ -471,6 +494,10 @@ a {
   display: flex;
   flex-flow: column wrap;
   gap: 40px;
+}
+
+label.all {
+  padding-left: 33px;
 }
 
 .in-stock,
@@ -505,18 +532,24 @@ a {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  padding-top: 9px;
 }
 
 .item-left {
   display: flex;
   flex-flow: row nowrap;
   align-items: start;
-  padding-top: 1px;
+  padding-top: 12px;
+}
+
+.item-checkbox-img {
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
 }
 
 .item-left .checkbox {
-  margin-top: 37.5px;
+  margin-top: -22px;
+  align-self: center;
 }
 
 .item-img {
@@ -527,6 +560,11 @@ a {
   display: flex;
   flex-flow: column wrap;
   gap: 8px;
+  padding-bottom: 4px;
+}
+
+.big-content {
+  padding-bottom: 0;
 }
 
 .name-item {
@@ -559,11 +597,18 @@ a {
 
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 4px;
+}
+
+.company {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 6px;
+  height: 16px;
 }
 
 .info {
-  padding-left: 5px;
+  /* padding-left: 5px; */
   cursor: pointer;
 }
 
@@ -583,6 +628,7 @@ a {
   display: flex;
   flex-flow: row nowrap;
   gap: 16px;
+  padding-top: 9px;
 }
 
 .item-btns {
@@ -590,6 +636,7 @@ a {
   flex-direction: column;
   gap: 8px;
   align-items: end;
+  padding-top: 3px;
 }
 
 .item-btn-quantity {
@@ -601,21 +648,30 @@ a {
   height: 44px;
   border-radius: 8px;
   background-color: #fff;
+  padding: 8px 4px;
+  padding-right: 3px;
+  padding-bottom: 10px;
+}
+
+.minus-btn,
+.plus-btn {
+  width: 24px;
+  height: 24px;
+
+  padding: 2px 7px 6px 8px;
 }
 
 .minus,
 .plus {
   color: var(--text-black, #000);
   text-align: center;
-
   font-size: 20px;
   font-weight: 400;
   line-height: 24px; /* 120% */
   letter-spacing: -0.2px;
 
-  padding-left: 8px;
-  padding-right: 8px;
-  border-radius: 8px;
+  width: 9px;
+  height: 16px;
 }
 
 .counter {
@@ -631,6 +687,9 @@ a {
   align-items: center;
 
   width: 44px;
+  height: 23px;
+  padding-left: 0.5px;
+  padding-right: 0.5px;
   /* padding-left: 18.205px;
   padding-right: 18.205px; */
 }
@@ -649,6 +708,12 @@ a {
   display: flex;
   align-items: center;
   gap: 16px;
+  height: 20px;
+}
+
+.wish,
+.remove {
+  height: 20px;
 }
 
 .item-price {
@@ -847,6 +912,10 @@ a {
   gap: 8px;
 }
 
+.delivery-date-content span {
+  height: 56px;
+}
+
 .delivery-item {
   height: 56px;
   width: 40px;
@@ -880,6 +949,7 @@ a {
   flex-flow: row nowrap;
   align-items: center;
   gap: 8px;
+  padding-top: 8px;
 }
 
 .payment-description {
@@ -941,18 +1011,15 @@ a {
 }
 
 footer.center {
-  display: flex;
   padding: 24px;
   padding-top: 48px;
   background: var(--system-violet, #6725a8);
+
   display: flex;
   align-items: center;
   justify-content: center;
 
   width: 100%;
-  z-index: -1;
-  bottom: 64px;
-  position: absolute;
 }
 
 .credits {
@@ -996,7 +1063,7 @@ footer.center {
   border-radius: 6px;
 
   position: absolute;
-  top: 0;
+  top: 1px;
   left: 0;
   z-index: 1;
 
