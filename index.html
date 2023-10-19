@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Товары и точка</title>
+    <script src="./script.js"></script>
 </head>
 
 <body>
@@ -45,15 +46,15 @@
         <section class="cart-container">
             <h1 class="cart-title">Корзина</h1>
             <div class="details-container">
-                <div id="stock-1" class="in-stock">
+                <div onclick="openStockContainer(this)" id="stock-1" class="in-stock">
                     <div class="checkbox">
                         <input id="check-all" class="checkbox-input" type="checkbox">
                         <label for="check-all" class="checkbox-label all">Выбрать все</label>
                     </div>
                     <hr class="check-underline">
                     <div class="checkbox-details">
-                        <input onclick="openInStock()" class="checkbox-details-input" type="checkbox"
-                            name="checkbox-details" id="checkbox-details-stock">
+                        <input class="checkbox-details-input" type="checkbox" name="checkbox-details"
+                            id="checkbox-details-stock">
                         <label for="checkbox-details-stock" class="checkbox-details-label"></label>
                         <div class="checkbox-details-container">
                             <div class="items">
@@ -287,12 +288,12 @@
                         </div>
                     </div>
                 </div>
-                <div id="stock-2" class="out-of-stock">
+                <div onclick="openStockContainer(this)" id="stock-2" class="out-of-stock">
                     <h4 class="oos-title">Отсутствуют · 3 товара</h4>
                     <hr class="check-underline oos">
                     <div class="checkbox-details oos">
-                        <input onclick="openOutOfStock()" class="checkbox-details-input oos" type="checkbox"
-                            name="checkbox-details" id="checkbox-details-oos">
+                        <input class="checkbox-details-input oos" type="checkbox" name="checkbox-details"
+                            id="checkbox-details-oos">
                         <label for="checkbox-details-oos" class="checkbox-details-label oos"></label>
                         <div class="checkbox-details-container oos">
                             <div class="items oos">
@@ -752,20 +753,7 @@
     </footer>
 
     <script>
-        function openInStock() {
-            if (document.getElementById('checkbox-details-stock').checked) {
-                document.getElementById('stock-1').style.marginBottom = '493px';
-            } else {
-                document.getElementById('stock-1').style.marginBottom = '0px';
-            }
-        }
-        function openOutOfStock() {
-            if (document.getElementById('checkbox-details-oos').checked) {
-                document.getElementById('stock-2').style.marginBottom = '381px';
-            } else {
-                document.getElementById('stock-2').style.marginBottom = '0px';
-            }
-        }
+
     </script>
 </body>
 
