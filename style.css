@@ -169,10 +169,8 @@ button {
   padding: 10px 24px;
   background-color: #f6f6fa;
   width: 100%;
-
-  /* position: absolute;
-  top: 88px;
-  border-radius: 24px; */
+  min-height: 90.220049vh;
+  padding-bottom: 26px;
 }
 
 .bg::before {
@@ -437,7 +435,7 @@ p {
 }
 
 .agreement input {
-  margin-top: 5px;
+  margin-top: 3px;
   align-self: self-start;
 }
 
@@ -498,6 +496,7 @@ a {
 
 label.all {
   padding-left: 33px;
+  margin-top: -1px;
 }
 
 .in-stock,
@@ -509,11 +508,15 @@ label.all {
   position: relative;
 }
 
+.out-of-stock {
+  margin-top: -1px;
+}
+
 .check-underline {
   position: absolute;
   width: 100%;
   height: 1px;
-  bottom: -16px;
+  bottom: -18px;
 }
 
 .checkbox-details-container {
@@ -522,7 +525,6 @@ label.all {
 }
 
 .items {
-  padding-top: 2px;
   display: flex;
   flex-flow: column wrap;
   gap: 20px;
@@ -560,6 +562,9 @@ label.all {
   display: flex;
   flex-flow: column wrap;
   gap: 8px;
+}
+
+.pb-4 {
   padding-bottom: 4px;
 }
 
@@ -603,7 +608,7 @@ label.all {
 .company {
   display: flex;
   flex-flow: row nowrap;
-  gap: 6px;
+  gap: 10px;
   height: 16px;
 }
 
@@ -781,13 +786,8 @@ label.all {
   background-color: #9797af;
 }
 
-.item.oos {
-  gap: 312px;
-  justify-content: start;
-}
-
-.big-item {
-  padding-top: 11px;
+.item-btns.oos {
+  padding-right: 126px;
 }
 
 .oos-title {
@@ -973,6 +973,8 @@ label.all {
 }
 
 .payment-icon {
+  width: 32px;
+  height: 24px;
   border-radius: 4px;
   background: var(--background-smoky, #f6f6fa);
 }
@@ -982,10 +984,6 @@ label.all {
 
   font-size: 13px;
   line-height: 16px; /* 123.077% */
-}
-
-.recipient {
-  margin-bottom: 28px;
 }
 
 .recipient-form {
@@ -1007,7 +1005,6 @@ label.all {
 
 .recipient-contacts {
   grid-template-columns: repeat(3, calc(33% - 41px / 3));
-  padding-top: 7px;
 }
 
 footer.center {
@@ -1027,6 +1024,10 @@ footer.center {
   text-align: center;
   font-size: 13px;
   line-height: 16px; /* 123.077% */
+}
+
+.credits span {
+  padding-left: 1px;
 }
 
 /* Checkbox */
@@ -1187,6 +1188,7 @@ footer.center {
   transition: 0.2s ease-in-out;
 
   cursor: pointer;
+  margin-top: 2px;
 }
 
 .checkbox-details-input:checked + .checkbox-details-label {
@@ -1197,7 +1199,7 @@ footer.center {
   display: none;
   position: absolute;
   left: 0;
-  top: 38px;
+  top: 40px;
 }
 
 .checkbox-details-input:checked ~ .checkbox-details-container {
@@ -1229,8 +1231,8 @@ footer.center {
 
 .input {
   position: relative;
-  padding-top: 16px;
-  margin-bottom: 16px;
+  padding-top: 18px;
+  margin-bottom: 19px;
 }
 
 .input-text {
@@ -1249,6 +1251,8 @@ footer.center {
 
 .input-text::placeholder {
   color: #9797af;
+  position: absolute;
+  bottom: 4px;
 }
 
 .input-label {
