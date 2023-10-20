@@ -152,7 +152,7 @@ button {
 .icon-cart {
   width: fit-content;
   padding-bottom: 7px;
-  padding-right: 12px;
+  padding-right: 11px;
 }
 
 .cart::after {
@@ -1315,4 +1315,26 @@ footer.center {
 input[type="text"]:focus,
 input[type="search"]:focus {
   outline: none;
+}
+
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .total {
+    max-width: 303px;
+  }
+
+  .total-delivery-return {
+    margin-top: 10px;
+  }
+
+  .total-delivery-return p {
+    width: 209px;
+  }
+
+  .total-delivery-title svg {
+    padding-top: 2px;
+  }
+
+  .br-desktop {
+    display: none;
+  }
 }
