@@ -1,10 +1,10 @@
-const openStockContainer = (stock) => {
-  let stockCheckboxInput = stock.children[2].children[0];
-  let stockCheckboxDetailsContainer = stock.children[2].children[2];
+const openStockContainer = (stock, marginBottom = 17) => {
+  const stockCheckboxInput = stock.children[2].children[0];
+  const stockCheckboxDetailsContainer = stock.children[2].children[2];
 
   if (stockCheckboxInput.checked) {
     stock.style.marginBottom = `${
-      stockCheckboxDetailsContainer.offsetHeight + 17
+      stockCheckboxDetailsContainer.offsetHeight + marginBottom
     }px`;
   } else {
     stock.style.marginBottom = "0px";
