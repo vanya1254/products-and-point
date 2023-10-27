@@ -29,6 +29,10 @@ button {
   padding-right: calc(50% - 700px);
 }
 
+.bottom-bar {
+  display: none;
+}
+
 .main-flex {
   /* display: grid;
   // grid-template-areas: "A A"; 
@@ -1362,13 +1366,17 @@ input[type="search"]:focus {
     display: none;
   }
 
+  .bg {
+    padding-bottom: 0;
+  }
+
   .bg::before {
     height: 25.38px;
     top: -25px;
   }
   .bg::after {
-    height: 25.38px;
-    bottom: -25px;
+    height: 24px;
+    bottom: -24px;
   }
 
   .header-container {
@@ -1397,7 +1405,12 @@ input[type="search"]:focus {
 
   .main-container {
     flex-wrap: wrap;
-    padding: 0px 16px;
+    /* padding: 0px 16px; */
+    padding: 0;
+  }
+
+  .main-flex {
+    gap: 16px;
   }
 
   .cart-container {
@@ -1410,6 +1423,17 @@ input[type="search"]:focus {
     letter-spacing: -0.2px;
     position: absolute;
     top: -10px;
+    padding-left: 16px;
+  }
+
+  .in-stock,
+  .out-of-stock {
+    padding: 0px 16px;
+  }
+
+  .checkbox-details-container,
+  .checkbox-details-container.oos {
+    padding: 0px 16px;
   }
 
   .in-stock .checkbox-label.all,
@@ -1419,6 +1443,7 @@ input[type="search"]:focus {
 
   .details-container {
     margin-top: 35px;
+    gap: 48px;
   }
 
   .items {
@@ -1544,5 +1569,203 @@ input[type="search"]:focus {
 
   .total {
     margin-top: 0;
+  }
+
+  .checkbox-details-label.oos {
+    margin-right: 4px;
+  }
+
+  .item-left-content.oos {
+    margin-top: 0;
+  }
+
+  .name-item.oos {
+    width: 192px;
+  }
+
+  .item-right.oos {
+    justify-content: end;
+  }
+  .item-btns.oos {
+    padding-right: 4px;
+  }
+  .item-btn-couple.oos {
+    height: 24px;
+  }
+
+  .order-registration {
+    gap: 12px;
+    margin-top: -14px;
+  }
+
+  .delivery,
+  .payment,
+  .recipient {
+    padding: 16px;
+    padding-bottom: 24px;
+  }
+
+  .delivery-title,
+  .payment-title,
+  .recipient-title {
+    font-size: 20px;
+    line-height: 28px; /* 140% */
+    letter-spacing: -0.2px;
+  }
+
+  .delivery-address {
+    gap: 0;
+    margin-top: -7px;
+  }
+
+  .delivery-price {
+    flex-flow: column wrap;
+    gap: 0;
+  }
+
+  .delivery-date {
+    flex-flow: column wrap;
+    gap: 12px;
+  }
+
+  .next-date {
+    margin-top: 8px;
+  }
+
+  .delivery-return {
+    margin: 0px 8px;
+  }
+
+  .delivery .delivery-return p {
+    width: 242px;
+  }
+
+  .payment,
+  .recipient {
+    gap: 8px;
+  }
+
+  .recipient-form {
+    padding: 0;
+    gap: 16px;
+  }
+
+  .recipient-name,
+  .recipient-contacts {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 18px;
+    padding-top: 2px;
+  }
+
+  .input {
+    padding-top: 13px;
+    margin-bottom: 16px;
+  }
+  .input-text {
+  }
+
+  /* .input-text::placeholder {
+    bottom: 4px;
+  } */
+
+  .total {
+    padding: 16px;
+    padding-top: 8px;
+    box-shadow: none;
+    background: var(--background-smoky, #f6f6fa);
+  }
+
+  .total-order-registration {
+    gap: 16px;
+  }
+
+  .total-price-title h2 {
+    font-size: 20px;
+    line-height: 28px; /* 140% */
+    letter-spacing: -0.2px;
+  }
+
+  .total-li {
+    margin-top: 0;
+  }
+
+  .total-li span {
+    font-size: 16px;
+    line-height: 24px; /* 150% */
+  }
+
+  .total-delivery-title,
+  .total-delivery-address,
+  .total-delivery-date,
+  .total-payment-title,
+  .total-payment-method {
+    display: none;
+  }
+
+  .total-delivery-return,
+  .total-payment-time {
+    margin-top: 0;
+    background: var(--system-smoky-dark, #f0ecf4);
+  }
+
+  .total-delivery-return p {
+    width: 242px;
+  }
+
+  .br-desktop {
+    display: none;
+  }
+
+  .order {
+    margin-top: 8px;
+  }
+
+  .agree:checked ~ .agree-text::before {
+    background-color: #f6f6fa;
+  }
+
+  footer {
+    margin-bottom: 56px;
+  }
+
+  .bottom-bar {
+    display: block;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border: none;
+    z-index: 100000;
+    background: var(--background-white, #fff);
+
+    /* Айфон / Тень от бара */
+    box-shadow: 0px -0.5px 0px 0px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2.5px);
+  }
+
+  .bar-container {
+    height: 56px;
+    border: none;
+    padding: 0px 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bar-btn {
+    border: none;
+  }
+
+  .bar-btn.cart::after {
+    top: -5px;
+    right: -6px;
+  }
+  .cart {
+    height: auto;
+    width: auto;
+  }
+
+  .active path {
+    fill: #cb11ab;
   }
 }

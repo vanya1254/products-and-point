@@ -1,3 +1,5 @@
+"use strict";
+
 const openStockContainer = (stock, marginBottom = 17) => {
   const stockCheckboxInput = stock.children[2].children[0];
   const stockCheckboxDetailsContainer = stock.children[2].children[2];
